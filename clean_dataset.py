@@ -19,7 +19,7 @@ def clean_temperature(value):
 
 
 df['temparature'] = df['temparature'].apply(clean_temperature).astype(float)
-df['flameDetected'] = df['flameDetected'].astype(str).str.strip().str.upper().map({'TRUE': 1, 'FALSE': 0})
+df['flameDetected'] = df['flameDetected'].astype(str).str.strip().str.upper().map({'TRUE': 0, 'FALSE': 4095})
 df['fireStatus'] = df['fireStatus'].astype(str).str.strip().str.upper().map({'TRUE': 1, 'FALSE': 0})
 
 
